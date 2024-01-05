@@ -34,9 +34,9 @@
             </div>
         </section>
         {{ end }}
-        <!-- Projects-->
-        {{ with site.Data.homepage.projects }}
-        <section class="projects-section bg-light" id="projects">
+        <!-- products-->
+        {{ with site.Data.homepage.products }}
+        <section class="products-section bg-light" id="products">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -81,8 +81,62 @@
             </div>
         </section>
         {{ end }}
+        <!-- Founders-->
+        {{ with site.Data.homepage.founders }}
+        <section class="founders-section text-center" id="founders">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">{{ .title }}</h2>
+                        <p class="text-white-50">{{ .desc }}</p>
+                    </div>
+                        
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="text-uppercase m-0">{{ .card1.name }}</h5>
+                                        <h6 class="text-uppercase m-0">{{ .card1.title }}</h6>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="small text-black-50">{{ .card1.description }}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="text-uppercase m-0">{{ .card2.name }}</h5>
+                                        <h6 class="text-uppercase m-0">{{ .card2.title }}</h6>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="small text-black-50">{{ .card2.description }}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="text-uppercase m-0">{{ .card3.name }}</h5>
+                                        <h6 class="text-uppercase m-0">{{ .card3.title }}</h6>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="small text-black-50">{{ .card3.description }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ if .button.enable }}
+                        <a class="btn btn-primary founders-btn" href="{{ .button.url }}">{{ .button.text }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ .image }}" alt="..." />
+            </div>
+        </section>
+        {{ end }}
         <!-- Signup-->
-        <section class="signup-section" id="signup">
+        <!-- <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -105,12 +159,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
@@ -120,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
@@ -130,20 +184,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.phone }}</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="{{ site.Params.twitter }}"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a> -->
                     <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a>
                 </div>
             </div>
