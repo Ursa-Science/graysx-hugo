@@ -19,14 +19,14 @@
         </header>
         <!-- About-->
         {{ with site.Data.homepage.about }}
-        <section class="about-section text-center" id="about">
+        <section class="about-section" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50">{{ .desc }}</p>
+                        <h2 class="text-white mb-4  text-center">{{ .title }}</h2>
+                        <p class="text-white-50 text-left">{{ .desc }}</p>
                         {{ if .button.enable }}
-                        <a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a>
+                        <div class="text-center"><a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a></div>
                         {{ end }}
                     </div>
                 </div>
@@ -36,14 +36,14 @@
         {{ end }}
         <!-- mission-->
         {{ with site.Data.homepage.mission }}
-        <section class="mission-section text-center" id="mission" style="background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);">
+        <section class="mission-section" id="mission" style="background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50">{{ .desc }}</p>
+                        <h2 class="text-white mb-4  text-center">{{ .title }}</h2>
+                        <div class="text-left"><p class="text-white-50">{{ .desc }}</p></div>
                         {{ if .button.enable }}
-                        <a class="btn btn-primary mission-btn" href="{{ .button.url }}">{{ .button.text }}</a>
+                        <div class="text-center"><a class="btn btn-primary mission-btn " href="{{ .button.url }}">{{ .button.text }}</a></div>
                         {{ end }}
                     </div>
                 </div>
@@ -53,45 +53,45 @@
         {{ end }}
         <!-- Founders-->
         {{ with site.Data.homepage.founders }}
-        <section class="founders-section text-center" id="founders" >
+        <section class="founders-section" id="founders" >
             <div class="container px-4 px-lg-5" >
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8" >
-                        <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50">{{ .desc }}</p>
+                        <h2 class="text-white mb-4 text-center">{{ .title }}</h2>
+                        <p class="text-white-50 text-center">{{ .desc }}</p>
                     </div>
                         
                     <div class="container px-4 px-lg-5">
                         <div class="row gx-4 gx-lg-5">
                             <div class="col-md-4 mb-3 ">
                                 <div class="card py-4 h-100">
-                                    <div class="card-body text-center">
-                                        <h5 class="text-uppercase m-0">{{ .card1.name }}</h5>
-                                        <h6 class="text-uppercase m-0">{{ .card1.title }}</h6>
+                                    <div class="card-body">
+                                        <h5 class="text-center text-uppercase m-0">{{ .card1.name }}</h5>
+                                        <h6 class="text-center text-uppercase m-0">{{ .card1.title }}</h6>
                                         <hr class="my-4 mx-auto" />
-                                        <div class="small text-black-50">{{ .card1.description }}</div>
+                                        <div class="text-left small text-black-50">{{ .card1.description }}</div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-3 ">
                                 <div class="card py-4 h-100">
-                                    <div class="card-body text-center">
-                                        <h5 class="text-uppercase m-0">{{ .card2.name }}</h5>
-                                        <h6 class="text-uppercase m-0">{{ .card2.title }}</h6>
+                                    <div class="card-body">
+                                        <h5 class="text-center text-uppercase m-0">{{ .card2.name }}</h5>
+                                        <h6 class="text-center text-uppercase m-0">{{ .card2.title }}</h6>
                                         <hr class="my-4 mx-auto" />
-                                        <div class="small text-black-50">{{ .card2.description }}</div>
+                                        <div class="text-left small text-black-50">{{ .card2.description }}</div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-4 mb-3 ">
                                 <div class="card py-4 h-100">
-                                    <div class="card-body text-center">
-                                        <h5 class="text-uppercase m-0">{{ .card3.name }}</h5>
-                                        <h6 class="text-uppercase m-0">{{ .card3.title }}</h6>
+                                    <div class="card-body">
+                                        <h5 class="text-uppercase m-0 text-center">{{ .card3.name }}</h5>
+                                        <h6 class="text-uppercase m-0 text-center">{{ .card3.title }}</h6>
                                         <hr class="my-4 mx-auto" />
-                                        <div class="small text-black-50">{{ .card3.description }}</div>
+                                        <div class="text-left small text-black-50">{{ .card3.description }}</div>
                                     </div>
                                 </div>
                             </div>

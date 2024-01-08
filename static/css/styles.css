@@ -11628,6 +11628,14 @@ body {
   margin-bottom: 5rem;
 }
 
+.mission-section {
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+.mission-section p {
+  margin-bottom: 5rem;
+}
+
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
